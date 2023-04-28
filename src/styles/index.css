@@ -1,3 +1,27 @@
 /* 
     General Styles
 */
+
+.main-card {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 30px;
+}
+
+.main-card::-webkit-scrollbar {
+  height: 5px; /* anchura del scroll */
+  background-color: transparent; /* color de fondo del área del scroll */
+  
+}
+
+.main-card::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  
+}
+
+.main-card::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+ 
+}

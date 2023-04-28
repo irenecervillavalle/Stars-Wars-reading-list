@@ -1,0 +1,19 @@
+nav{
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: #cde4ef;
+}
+
+.logo{
+    height: 50px;
+    width: 100px;
+}
+
+.btn-fav{
+    height: 30px;
+    width: 100px;
+    border: 1px solid blue;
+}

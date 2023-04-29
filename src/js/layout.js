@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
@@ -10,6 +10,9 @@ import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Character from "./component/Character";
+import OnlyVehiculos from "./component/OnlyVehiculos";
+import OnlyPlanets from "./component/OnlyPlanets";
+import { StorageContext } from "../context/Context";
 
 //create your first component
 const Layout = () => {
@@ -17,21 +20,30 @@ const Layout = () => {
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
 
+	const [favorites, setFavorites] = useState([])
+
+	const data = {
+		favorites,
+		setFavorites
+	}
+
 	return (
-		<div>
+		<StorageContext.Provider  value={data} >
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="/character/:endpoint/:id" element={<Character />} />
+						<Route path="/vehiculo/:endpoint/:id" element={<OnlyVehiculos />} />
+						<Route path="/planeta/:endpoint/:id" element={<OnlyPlanets />} />
 						<Route path="/single/:theid" element={<Single />} />
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
-		</div>
+		</StorageContext.Provider>
 	);
 };
 

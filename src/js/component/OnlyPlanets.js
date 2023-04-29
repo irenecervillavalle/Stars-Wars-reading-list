@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import "../../styles/index.css";
 
-const OnlyVehiculos = () => {
+const OnlyPlanets = () => {
   const params = useParams();
   const [character, setCharacter] = useState({});
 
@@ -25,12 +25,12 @@ const OnlyVehiculos = () => {
         
         <div className="cont-properties">
           <div>
-            <p>Capacidad de carga: {character?.properties?.cargo_capacity}</p>
-            <p>Modelo: {character?.properties?.model} </p>
+            <p>Diametro: {character?.properties?.diameter}</p>
+            <p>Gravedad: {character?.properties?.gravity} </p>
           </div>
           <div>
-            <p>Clase de vehiculo: {character?.properties?.vehicle_class}</p>
-            <p>Pasajeros: {character?.properties?.passengers} </p>
+            <p>Poblacion: {character?.properties?.population}</p>
+            <p>Periodo Rotacion: {character?.properties?.rotation_period} </p>
           </div>
         </div>
       </div>
@@ -38,4 +38,4 @@ const OnlyVehiculos = () => {
   );
 };
 
-export default OnlyVehiculos;
+export default OnlyPlanets;

@@ -19,7 +19,7 @@ const People = () => {
     
     <div className="main-card">
     { people.map( item => {
-        return <CardPeople name={item.name} id={item.uid} endpoint={'people'} />
+        return <CardPeople name={item.name} id={item.uid} endpoint={'people'} render='character'/>
     } ) }
     </div>
     

@@ -5,8 +5,9 @@ import Vehiculos from "../component/Vehiculos";
 import Planets from "../component/Planets";
 
 export const Home = () => (
+
 	<div >
-		
+
 		<main className="cont-api-info">
         <div>
           <h1>Personajes</h1>

@@ -13,9 +13,19 @@ nav{
 }
 
 .btn-fav{
-    height: 30px;
-    width: 100px;
-    border: 1px solid blue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 10px;
+    background-color: #71b7e4;
+    border-radius: 5px;
+}
+
+.btn-fav p{
+    margin: 0;
+    color: white;
+    font-weight: 500;
 }
 
 .cont-api-info{

@@ -13,6 +13,7 @@ nav{
 }
 
 .btn-fav{
+    position: relative;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -20,6 +21,11 @@ nav{
     padding: 7px 10px;
     background-color: #71b7e4;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-fav:hover{
+    background-color: #72c0f1;
 }
 
 .btn-fav p{
@@ -33,4 +39,35 @@ nav{
     flex-direction: column;
     gap: 15px;
     padding: 15px;
+}
+
+.cont-elements{
+    position: absolute;
+    top: 38px;
+    right: 0;
+    width: 165px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px 10px;
+}
+.p1{
+    background-color: black;
+    padding: "0 5px";
+    border-radius: "2px";
+}
+.div-fav{
+    display: "flex";
+    justify-content: "space-between";
+    align-items: "center";
+    gap: "15px";
+
+}
+.p2{
+  color: black;
+
+}
+.p3{
+    color: black; 
+    text-align: "center";
 }

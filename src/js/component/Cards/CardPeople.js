@@ -1,11 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './CardPeople.css'
 import { Button } from '@mui/material'
 import { NavLink } from 'react-router-dom'
+import { StorageContext } from '../../../context/Context'
 
 const CardPeople = ({name,endpoint, id, render}) => {
+  
+  const { setFavorites, favorites } = useContext(StorageContext)
 
-  console.log(endpoint, id, render)
+    const addFavorite = (name) => {
+      setFavorites([...favorites, name])
+      
+    }
+
+
   return (
      
         
@@ -15,7 +23,7 @@ const CardPeople = ({name,endpoint, id, render}) => {
         <Button  variant="contained">Ver Mas</Button>
         </NavLink>
         <div style={{ display:'flex', justifyContent: 'flex-end', width:'100%' }}>
-        <i style={{ fontSize:"20px", cursor:'pointer' }} className="fa-regular fa-heart"></i>
+        <i  onClick={() => addFavorite(name)} style={{ fontSize:"20px", cursor:'pointer' }} className="fa-regular fa-heart"></i>
         </div>
         
         
